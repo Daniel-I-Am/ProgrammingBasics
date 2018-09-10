@@ -11,8 +11,10 @@
     <p>Click the button to draw a diamond on the canvas</p>
     <form>
         <input type="button" value="Draw" onclick="initDraw(selectedShape);">
-        <select onchange="selectedShape = this.value">
+        <select autocomplete="off" onchange="selectedShape = this.value">
+            <option hidden=hidden selected="selected">Please select...</option>
             <option value="diamond">Diamond</option>
+            <option value="octagon">Octagon</option>
         </select>
     </form>
     <canvas height=512px width=512px id="diamondCanvas"></canvas>

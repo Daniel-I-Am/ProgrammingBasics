@@ -23,11 +23,10 @@ function draw(canvas, shape) {
     // draw according to params
     // get some clearer var names
     svg = shape.children[0];
-    grid = svg.children[0];
     // get scale to draw at (based on canvas size and svg size)
     scale = Math.min(canvas.width / Number(svg.attributes.width.value.slice(0, -2)), canvas.height / Number(svg.attributes.height.value.slice(0, -2)))
     // get the polygons inside the svg
-    polygons = grid.children[0].children;
+    polygons = svg.children;
     for (n in polygons) {
         // split the coords of the polygon
         points = polygons[n].attributes.points.value.split(" ");
