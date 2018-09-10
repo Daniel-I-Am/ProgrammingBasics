@@ -1,4 +1,4 @@
-shapeColor = '#0000ff'
+defaultCol = '#ff00ff'
 selectedShape = "diamond"
 
 function initDraw(shapeName) {    
@@ -33,7 +33,17 @@ function draw(canvas, shape) {
         // get the canvas' context
         var ctx = canvas.getContext('2d');
         // set fill color
-        ctx.fillStyle = shapeColor;
+        style = {}
+        polyStyle = polygons[n].attributes.style.value.split(";");
+        for (i in polyStyle) {
+            styleAttr = polyStyle[i].split(":")
+            if (styleAttr[1] == "none") {styleAttr[1] = defaultCol}
+            style[styleAttr[0]] = styleAttr[1]
+        }
+        console.log(style)
+        ctx.fillStyle = style["fill"];
+        ctx.lineWidth = Number(style["stroke-width"])*scale;
+        ctx.strokeStyle = style["stroke"];
         // init draw
         ctx.beginPath();
         // go through all points
@@ -50,6 +60,8 @@ function draw(canvas, shape) {
         }
         // finish up paths
         ctx.closePath();
+        // stroke
+        ctx.stroke();
         // fill
         ctx.fill();
         // clear up memory
