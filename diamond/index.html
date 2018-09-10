@@ -10,7 +10,10 @@
     <h1>Draw a Diamond</h1>
     <p>Click the button to draw a diamond on the canvas</p>
     <form>
-        <input type="button" value="Draw" onclick="drawDiamond();">
+        <input type="button" value="Draw" onclick="initDraw(selectedShape);">
+        <select onchange="selectedShape = this.value">
+            <option value="diamond">Diamond</option>
+        </select>
     </form>
     <canvas height=512px width=512px id="diamondCanvas"></canvas>
 </body>

@@ -1,16 +1,10 @@
 shapeColor = '#0000ff'
-
-// get canvas object
-canvas = document.getElementById("diamondCanvas");
-// set canvas size properly
-/*canvas.attributes.height = 500
-canvas.attributes.width = 500*/
-
-function drawDiamond() {
-    initDraw("diamond");
-}
+selectedShape = "diamond"
 
 function initDraw(shapeName) {    
+    // get canvas object
+    canvas = document.getElementById("diamondCanvas");
+
     // fetch and draw
     fetchShape(shapeName, function (shape) {draw(canvas, shape)});
 }
@@ -31,7 +25,6 @@ function draw(canvas, shape) {
     svg = shape.children[0];
     grid = svg.children[0];
     // get scale to draw at (based on canvas size and svg size)
-    console.log(canvas.width, canvas.clientWidth, Number(svg.attributes.width.value.slice(0, -2)), canvas.height, canvas.clientHeight ,Number(svg.attributes.height.value.slice(0, -2)))
     scale = Math.min(canvas.width / Number(svg.attributes.width.value.slice(0, -2)), canvas.height / Number(svg.attributes.height.value.slice(0, -2)))
     // get the polygons inside the svg
     polygons = grid.children[0].children;
