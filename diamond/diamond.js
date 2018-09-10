@@ -1,4 +1,4 @@
-defaultCol = '#ff00ff'
+defaultCol = '#ffffff'
 selectedShape = "diamond"
 
 function initDraw(shapeName) {    
