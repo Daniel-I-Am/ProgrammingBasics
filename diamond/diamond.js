@@ -44,7 +44,6 @@ async function draw(canvas, shape) {
             if (styleAttr[1] == "none") {styleAttr[1] = defaultCol}
             style[styleAttr[0]] = styleAttr[1]
         }
-        console.log(style)
         ctx.fillStyle = style["fill"];
         ctx.lineWidth = Number(style["stroke-width"])*scale;
         ctx.strokeStyle = style["stroke"];
