@@ -24,6 +24,7 @@ async function fetchShape(shapeName, _callback) {
 async function draw(canvas, shape) {
     context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
+    context = null;
     // draw according to params
     // get some clearer var names
     svg = shape.children[0];
