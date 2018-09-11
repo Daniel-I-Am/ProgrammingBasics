@@ -65,7 +65,7 @@ async function draw(canvas, shape) {
         // finish up paths
         ctx.closePath();
         // delay execution
-        await sleep(150);
+        await sleep(50);
         // stroke
         ctx.stroke();
         // fill
