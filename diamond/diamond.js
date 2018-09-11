@@ -37,14 +37,16 @@ async function draw(canvas, shape) {
         var points = polygons[n].attributes.points.value.split(" ");
         // get the canvas' context
         var ctx = canvas.getContext('2d');
-        // set fill color
+        // put styling into array
         var style = {}
         var polyStyle = polygons[n].attributes.style.value.split(";");
+
         for (i in polyStyle) {
             var styleAttr = polyStyle[i].split(":")
             if (styleAttr[1] == "none") {styleAttr[1] = defaultCol}
             style[styleAttr[0]] = styleAttr[1]
         }
+        // set styling
         ctx.fillStyle = style["fill"];
         ctx.lineWidth = Number(style["stroke-width"])*scale;
         ctx.strokeStyle = style["stroke"];
