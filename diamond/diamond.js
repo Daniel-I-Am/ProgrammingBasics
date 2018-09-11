@@ -1,5 +1,9 @@
-defaultCol = '#ffffff'
-selectedShape = "diamond"
+defaultCol = '#ffffff';
+selectedShape = "diamond";
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function initDraw(shapeName) {    
     // get canvas object
@@ -9,7 +13,7 @@ function initDraw(shapeName) {
     fetchShape(shapeName, function (shape) {draw(canvas, shape)});
 }
 
-function fetchShape(shapeName, _callback) {
+async function fetchShape(shapeName, _callback) {
     // fetch file and call `_callback` with the data
     fetch("./svgs/" + shapeName + ".svg")
             .then(response => response.text())
@@ -17,7 +21,7 @@ function fetchShape(shapeName, _callback) {
             .then(data => _callback(data))
 }
 
-function draw(canvas, shape) {
+async function draw(canvas, shape) {
     context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
     // draw according to params
@@ -60,6 +64,8 @@ function draw(canvas, shape) {
         }
         // finish up paths
         ctx.closePath();
+        // delay execution
+        await sleep(150);
         // stroke
         ctx.stroke();
         // fill
