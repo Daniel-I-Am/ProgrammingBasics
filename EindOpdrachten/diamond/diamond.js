@@ -72,7 +72,7 @@ async function draw(canvas, shape) {
         ctx.stroke();
         // fill
         ctx.fill();
-        // clear up memory
+        // clear up memory, may not be nessecary
         ctx = null;
     }
 }

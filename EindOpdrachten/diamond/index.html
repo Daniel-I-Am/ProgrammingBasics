@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Draw a Diamond</h1>
-    <p>Click the button to draw a diamond on the canvas</p>
+    <p>Select an item from the dropdown and click the `draw` button to draw it!</p>
     <form>
         <input type="button" value="Draw" onclick="initDraw(selectedShape);">
         <select autocomplete="off" onchange="selectedShape = this.value">
@@ -16,7 +16,7 @@
             <option value="diamond">Diamond</option>
             <option value="realDiamond">Real Diamond</option>
             <option value="octagon">Octagon</option>
-            <option value="square">...</option>
+            <option value="square">Square</option>
         </select>
     </form>
     <canvas height=512px width=512px id="diamondCanvas"></canvas>
