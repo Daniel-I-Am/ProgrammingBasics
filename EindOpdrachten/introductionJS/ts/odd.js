@@ -5,6 +5,10 @@ function submitOdd() {
         returnP.innerHTML = "Please enter a number";
         return;
     }
+    if (Number(input.value) < 0) {
+        returnP.innerHTML = "Checking if a number below 0 is odd, why would you even think about doing that...";
+        return;
+    }
     if (Number(input.value) % 2 == 1) {
         returnP.innerHTML = "This number is odd";
     }
