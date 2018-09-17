@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid: repeat(1fr, 2) / auto;
+}
+
+.section {
+    border: .2em solid black;
+    border-bottom-width: .1em;
+}
+
+.section:last-of-type {
+    border-bottom-width: .2em;
+}
