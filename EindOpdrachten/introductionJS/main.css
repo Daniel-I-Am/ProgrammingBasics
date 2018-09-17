@@ -6,13 +6,23 @@ body {
     height: 100vh;
     display: grid;
     grid: repeat(1fr, 2) / auto;
+    margin: 0;
+    padding: 0;
 }
 
 .section {
     border: .2em solid black;
     border-bottom-width: .1em;
+    margin: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section:first-of-type {
+    margin-top: 1em;
 }
 
 .section:last-of-type {
     border-bottom-width: .2em;
+    margin-bottom: 1em;
 }
