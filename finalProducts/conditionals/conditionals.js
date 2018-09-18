@@ -1,5 +1,6 @@
 function exercise0() {
     let grade = 7;
+    // check for each number
     if (grade < 1 || typeof grade != "number") {
         console.log("Invalid grade");
     } else if (grade < 6) {
@@ -15,8 +16,10 @@ function exercise0() {
 
 function exercise1() {
     let grade = 7;
+    // switch for type
     switch (typeof grade) {
         case "number":
+            // switch for amount
             switch (grade) {
                 case 10:
                     console.log("Uitmuntend");
