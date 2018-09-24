@@ -20,8 +20,8 @@ while (i < len) {
 }
 
 // opdracht 2
-string = "Geweldig!";
 let newString = "";
+string = "Geweldig!";
 i = string.length;
 
 while (i > 0) {
