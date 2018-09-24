@@ -52,7 +52,7 @@ for (let i = 0; i < len; i++) {
 let divisible = new Array();
 for (let i = 1; i <= 25; i++) {
     if (i % 3 == 0) {
-        divisible.push(i)
+        divisible.push(i);
     }
 }
-console.log(divisible)
+console.log(divisible);
