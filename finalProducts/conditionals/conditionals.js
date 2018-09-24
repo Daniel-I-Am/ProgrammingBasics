@@ -29,8 +29,6 @@ function exercise1() {
                     console.log("Goed");
                     break;
                 case 7:
-                    console.log("Voldoende");
-                    break;
                 case 6:
                     console.log("Voldoende");
                     break;
