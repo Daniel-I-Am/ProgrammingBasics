@@ -1,3 +1,4 @@
+// opdracht 0
 let i = 0;
 while (i < 10) {
     i++;
@@ -5,6 +6,8 @@ while (i < 10) {
 }
 i = 0
 
+
+// opdracht 1
 let dagarray = new Array('zondag','maandag','dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag');
 let date = new Date;
 let dag = dagarray[date.getDay()];
@@ -16,6 +19,7 @@ while (i < len) {
     i++;
 }
 
+// opdracht 2
 string = "Geweldig!";
 let newString = "";
 i = string.length;
