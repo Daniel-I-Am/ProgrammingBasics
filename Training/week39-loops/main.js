@@ -49,10 +49,10 @@ for (let i = 0; i < len; i++) {
 }
 
 // opdracht 2
-let newString = "";
-string = "Geweldig!";
-
-for (let i = string.length; i > 0; i--) {
-    newString += string[i-1];
+let divisible = new Array();
+for (let i = 1; i <= 25; i++) {
+    if (i % 3 == 0) {
+        divisible.push(i)
+    }
 }
-console.log(newString);
+console.log(divisible)
