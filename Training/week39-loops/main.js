@@ -4,8 +4,7 @@ while (i < 10) {
     i++;
     console.log(i);
 }
-i = 0
-
+i = 0;
 
 // opdracht 1
 let dagarray = new Array('zondag','maandag','dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag');
@@ -15,7 +14,7 @@ let string = "Het is " + dag + "!";
 let len = string.length;
 
 while (i < len) {
-    console.log(string.charAt(i))
+    console.log(string[i]);
     i++;
 }
 
@@ -26,7 +25,7 @@ i = string.length;
 
 while (i > 0) {
     i--;
-    newString += string.charAt(i);
+    newString += string[i];
 }
 console.log(newString);
 
