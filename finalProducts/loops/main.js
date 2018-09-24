@@ -26,10 +26,10 @@ function div(n, f) {
 
 // loop through array and check if is divisible by 4
 function deelbaar() {
-    let i = 0,
-        arr = [4,8,16,20,60,80,24],
+    let i = 0;
+    const arr = [4,8,16,20,60,80,24],
         factor = 4;
-    let l = arr.length;
+    const l = arr.length;
     while (div(arr[i], factor)) {
         i++;
         if (i == l) {
