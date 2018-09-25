@@ -34,3 +34,35 @@ function fac(n) {
     if (n == 1 || n == 0) return 1;
     return n * fac(n-1);
 }
+
+function animal(type) {
+    let sound = ''
+    switch(type) {
+        case "horse":
+            sound = 'neigh';
+            playSound(sound);
+            break;
+        case "cat":
+            sound = 'meow';
+            playSound(sound);
+            break;
+        case "dog":
+            sound = 'bark';
+            playSound(sound);
+            break;
+        case "mouse":
+            sound = 'squeek';
+            break;
+        default:
+            sound = '*just silence* (animal unknown)';
+            break;
+    }
+    console.log(sound)
+}
+
+function playSound(name) {
+    var myAudioObj = new Audio();
+    myAudioObj.src = './' + name +'.mp3';
+    myAudioObj.onloadeddata = myAudioObj.play;
+    myAudioObj.load();
+}
