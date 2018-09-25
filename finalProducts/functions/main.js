@@ -21,14 +21,15 @@ function countdown(n) {
 }
 
 function hoist() {
-    console.log("log x")
-    console.log(x)
-    console.log("declare x")
-    var x = 5;
-
     console.log("log result of f()")
     console.log(f())
     console.log("define function f()")
     function f() { return 42 }
-    // the function could be called before it was declared but the variable `x` couldn't
+    // the function could be called before it was declared in the declaration
+
+    console.log("log result of f()")
+    console.log(f())
+    console.log("define function f()")
+    let f = function() { return 42 }
+    // the function could *not* be called before it was declared in the expression
 }
