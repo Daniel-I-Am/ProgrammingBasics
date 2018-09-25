@@ -29,3 +29,8 @@ function pig(n) {
     for (let i = n; n > 0; n--) str += "\u{1F437}"
     return str;
 }
+
+function fac(n) {
+    if (n == 1) return 1;
+    return n * fac(n-1);
+}
