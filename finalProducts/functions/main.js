@@ -33,12 +33,15 @@ function animal(type) {
     switch(type) {
         case "horse":
             sound = 'neigh';
+            playSound(sound);
             break;
         case "cat":
             sound = 'meow';
+            playSound(sound);
             break;
         case "dog":
-            sound = 'woof';
+            sound = 'bark';
+            playSound(sound);
             break;
         case "mouse":
             sound = 'squeek';
@@ -48,4 +51,9 @@ function animal(type) {
             break;
     }
     console.log(sound)
+}
+
+function playSound(name) {
+    var audio = new Audio(name +'.mp3');
+    audio.play();
 }
