@@ -54,6 +54,8 @@ function animal(type) {
 }
 
 function playSound(name) {
-    var audio = new Audio(name +'.mp3');
-    audio.play();
+    var myAudioObj = new Audio();
+    myAudioObj.src = './' + name +'.mp3';
+    myAudioObj.onloadeddata = myAudioObj.play;
+    myAudioObj.load();
 }
