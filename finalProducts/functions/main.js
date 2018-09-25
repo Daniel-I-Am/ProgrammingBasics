@@ -25,4 +25,27 @@ function hoist() {
     console.log(f())
     console.log("define function f()")
     function f() { return 42 }
+    // the function could be called before it was declared but the variable `x` couldn't
+}
+
+function animal(type) {
+    let sound = ''
+    switch(type) {
+        case "horse":
+            sound = 'neigh';
+            break;
+        case "cat":
+            sound = 'meow';
+            break;
+        case "dog":
+            sound = 'woof';
+            break;
+        case "mouse":
+            sound = 'squeek';
+            break;
+        default:
+            sound = '*just silence* (animal unknown)';
+            break;
+    }
+    console.log(sound)
 }
