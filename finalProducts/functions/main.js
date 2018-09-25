@@ -14,3 +14,15 @@ function countdown(n) {
         countdown(n-1);
     }
 }
+
+function hoist() {
+    console.log("log x")
+    console.log(x)
+    console.log("declare x")
+    var x = 5;
+
+    console.log("log result of f()")
+    console.log(f())
+    console.log("define function f()")
+    function f() { return 42 }
+}
