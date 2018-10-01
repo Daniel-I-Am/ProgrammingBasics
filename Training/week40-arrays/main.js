@@ -5,4 +5,4 @@ let products = [
 ];
 
 console.log("in ieder geval heb ik een deel van het lijstje ondertussen overgenomen...");
-console.table(products);
+console.log(products);
