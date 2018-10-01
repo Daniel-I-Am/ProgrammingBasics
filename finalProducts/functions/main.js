@@ -28,8 +28,8 @@ function hoist() {
     // the function could be called before it was declared in the declaration
 
     console.log("log result of f()")
-    console.log(f())
+    console.log(g())
     console.log("define function f()")
-    let f = function() { return 42 }
+    let g = function() { return 42 }
     // the function could *not* be called before it was declared in the expression
 }
