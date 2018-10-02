@@ -1,7 +1,9 @@
+// constant object
 const lapRounds = {
     lapRounds: [55.99,  63.00, 63.01, 54.01, 62.79, 52.88, 53.10, 54.12]
 };
 
+// teacher object array 
 const teachers = [
     {
         name: "Loek",
@@ -26,4 +28,5 @@ const teachers = [
     }
 ];
 
+// print sentence, per teacher object
 teachers.forEach(obj => console.log(`I have a ${obj.profession} named ${obj.name} and he likes to work on a ${obj.brand} computer. I earn €${obj.salary / obj.hoursPerWeek} per hour`));
