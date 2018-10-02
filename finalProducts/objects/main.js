@@ -1,7 +1,7 @@
 // constant object
-const lapRounds = {
-    lapRounds: [55.99,  63.00, 63.01, 54.01, 62.79, 52.88, 53.10, 54.12]
-};
+const lapRoundsArr = [55.99,  63.00, 63.01, 54.01, 62.79, 52.88, 53.10, 54.12];
+const lapRoundsObj = Object.assign({}, lapRoundsArr);
+console.log(lapRoundsObj)
 
 // teacher object array 
 const teachers = [
