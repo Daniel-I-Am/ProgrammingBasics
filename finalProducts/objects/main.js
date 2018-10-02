@@ -29,4 +29,4 @@ const teachers = [
 ];
 
 // print sentence, per teacher object
-teachers.forEach(obj => console.log(`I have a ${obj.profession} named ${obj.name} and he likes to work on a${function() { if (obj.brand.match(/^[aioueyAIOUEY]/)) {return "n"} return ""}()} ${obj.brand} computer. I earn €${obj.salary / obj.hoursPerWeek} per hour`));
+teachers.forEach(obj => console.log(`I have a ${obj.profession} named ${obj.name} and he likes to work on a${function() { if (obj.brand.toLowerCase().match(/^[aiouey]/)) {return "n"} return ""}()} ${obj.brand} computer. I earn €${obj.salary / obj.hoursPerWeek} per hour`));
