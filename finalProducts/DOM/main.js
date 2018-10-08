@@ -25,10 +25,10 @@ function grades() {
 function colors() {
     // get the list and define colors
     let list = document.getElementById("courses"),
-        colors = ["#aabbcc", "#cc1199", "#123456", "#a1b2c3", "#192837", "#204792", "#347891"];
+        colors = ["#aabbcc", "#cc1199"];
     // loop through colors and apply them to list
-    colors.forEach((e, i) => {
-        list.children[i].style = `background-color: ${e.toString()}`;
+    Array.prototype.forEach.call(list.children, (e, i) => {
+        e.style = `background-color: ${colors[i%2].toString()}`;
     });
 }
 
