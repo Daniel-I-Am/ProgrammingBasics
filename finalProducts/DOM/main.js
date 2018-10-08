@@ -19,7 +19,7 @@ function grades() {
     averageTableElem.children[0].innerHTML = "Average Grade";
     averageTableElem.children[1].innerHTML = avg;
     // add element to document
-    document.getElementById("grades").appendChild(averageTableElem);
+    grades[0].parentElement.appendChild(averageTableElem);
 }
 
 function colors() {
