@@ -28,7 +28,7 @@ function colors() {
         colors = ["#aabbcc", "#cc1199"];
     // loop through colors and apply them to list
     Array.prototype.forEach.call(list.children, (e, i) => {
-        e.style = `background-color: ${colors[i%2].toString()}`;
+        e.style = `background-color: ${colors[i%colors.length].toString()}`;
     });
 }
 
