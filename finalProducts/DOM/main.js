@@ -40,3 +40,10 @@ function createImageElement(imageSrcName) {
     // append to document
     document.body.appendChild(img)
 }
+
+function whenLoaded() {
+    grades();
+    colors();
+    for (let i = 600; i<650; i++)
+        createImageElement(`//unsplash.it/800/${i}`);
+}
