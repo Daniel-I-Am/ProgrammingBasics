@@ -51,7 +51,7 @@ body {
 }
 
 hr.div {
-    grid-area: d
+    grid-area: d;
 }
 
 .shoppingList {
