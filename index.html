@@ -9,5 +9,19 @@
 <body>
     <h1>Welcome</h1>
     <p>This is just a placeholder page to make github pages work.</p>
+    <p>A small list of some of the projects on this github repo:</p>
+    <ul id=loc></ul>
+    <script>
+        let locs = ["diamond", "DOM", "Events/clicker", "Events/shoppingList", "loops", "typesAndVariables"];
+        let pElem = document.getElementById("loc");
+        locs.forEach(e => {
+            let li = document.createElement("li")
+            let a = document.createElement("a");
+            a.href = `./finalProducts/${e}/`;
+            a.innerHTML = e;
+            li.appendChild(a);
+            pElem.appendChild(li);
+        });
+    </script>
 </body>
 </html>
