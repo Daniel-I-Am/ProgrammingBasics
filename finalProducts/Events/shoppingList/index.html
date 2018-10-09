@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping List</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1 class="title">Shopping List</h1>
+    <div class="header">
+        <span>Name</span>
+        <span>Amount</span>
+        <span>Price</span>
+    </div> 
+    <form class="input">
+        <input autocomplete="off" type="text"   id="nameInput"    placeholder="Apples"/>
+        <input autocomplete="off" type="number" id="amountInput"  placeholder="1"     />
+        <input autocomplete="off" type="number" id="priceInput"   placeholder="1.25"   step="any"/>
+        <input autocomplete="off" type="button" id="submitInput"  value="Add"         />
+    </form>
+    <p class="announcement" id="errorField"></p>
+    <table class="total">
+        <tr>
+            <td>Totaal</td>
+            <td id="totalDisplay">€0.00</td>
+        </tr>
+    </table>
+    <hr class="div">
+    <table id="shoppingList" class="shoppingList">
+        <th>
+            <td>Product</td>
+            <td>Amount</td>
+            <td>Prijs</td>
+            <td style="color: rgba(1,1,1,0)">Remove</td>
+        </th>
+    </table>
+</body>
+</html>
