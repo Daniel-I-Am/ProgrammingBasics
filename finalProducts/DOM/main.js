@@ -24,12 +24,17 @@ function grades() {
 
 function colors() {
     // get the list and define colors
-    let list = document.getElementById("courses"),
+    const list = document.getElementById("courses"),
         colors = ["none", "#cc1199"];
     // loop through colors and apply them to list
     Array.prototype.forEach.call(list.children, (e, i) => {
         e.style = `background-color: ${colors[i%colors.length].toString()}`;
     });
+
+    // for (let i = 0; i < list.children; i++) {
+    //     let e = list.children[i];
+    //     e.style = `background-color: ${colors[i%colors.length].toString()}`;
+    // }
 }
 
 function createImageElement(imageSrcName) {
