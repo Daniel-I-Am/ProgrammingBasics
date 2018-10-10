@@ -69,7 +69,7 @@ function addToList(name, amount, price) {
     // append empty td (hidden column)
     tr.appendChild(document.createElement("td"))
     // loop through 4 values
-    for (var e of [name, amount, price, "remove"]) {
+    for (var e of [name, amount, money(price), "remove"]) {
         // create cell
         let td = document.createElement("td");
         // set innerHTML
@@ -95,6 +95,14 @@ function remove(evt) {
     sum();
 }
 
+function money(num) {
+    return `€${Math.floor(num).toString()},${function() {let n = Math.round((total%1)*100).toString(); if (n.length == 1) return "0" + n; return n}()}`
+}
+
+function unmoney(mon) {
+    return Number(mon.match(/[0-9]/g).join(""))/100
+}
+
 function sum() {
     // reset total value
     total = 0;
@@ -102,10 +110,10 @@ function sum() {
     let elem = shoppingList.children;
     // sum amount*value
     for (let i = 1; i < elem.length; i++) {
-        total += Number(elem[i].children[2].innerHTML) * Number(elem[i].children[3].innerHTML);
+        total += Number(elem[i].children[2].innerHTML) * unmoney(elem[i].children[3].innerHTML);
     }
     // display total
-    document.getElementById("totalDisplay").innerHTML = `€${Math.floor(total).toString()},${function() {let n = Math.round((total%1)*100).toString(); if (n.length == 1) return "0" + n; return n}()}`;
+    document.getElementById("totalDisplay").innerHTML = money(total);
 }
 
 // make init() trigger when loading of the page has been finished
