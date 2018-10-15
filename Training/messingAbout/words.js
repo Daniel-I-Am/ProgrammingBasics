@@ -2,7 +2,7 @@ const fs = require("fs");
 const words = fs.readFileSync("words.txt").toString();
 const wordArray = words.split("\n");
 
-var badLetters = /[gkmqvwxzio\-s]/i;
+var badLetters = /[kmqvwxzios\-]/i;
 var longestWords = [];
 
 for (var testWord of wordArray) {
@@ -36,6 +36,7 @@ let alphabet = {
     d: [false, false, true, true, true, true, true],
     e: [true, true, false, true, true, false, true],
     f: [true, true, false, true, true, false, false],
+    g: [true, true, false, false, true, true, true],
     h: [false, true, false, true, true, true, false],
     j: [true, false, true, false, false, true, true],
     l: [false, false, true, false, false, true, false],
@@ -56,11 +57,6 @@ let alphabet = {
     8: [true, true, true, true, true, true, true],
     9: [true, true, true, true, false, true, true]
 }
-
-// //abcdefhjlnprtuy0123456789
-// for (var l of "abcdefhjlnprtuy0123456789".split("")) {
-//     num(...alphabet[l])
-// }
 
 for (var word of longestWords) {
     let lines = ["", "", "", "", ""];
