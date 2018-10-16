@@ -96,7 +96,7 @@ function remove(evt) {
 }
 
 function money(num) {
-    return `€${Math.floor(num).toString()},${function() {let n = Math.round((total%1)*100).toString(); if (n.length == 1) return "0" + n; return n}()}`
+    return `€${Math.floor(num).toString()},${function() {let n = Math.round((num%1)*100).toString(); if (n.length == 1) return "0" + n; return n}()}`
 }
 
 function unmoney(mon) {

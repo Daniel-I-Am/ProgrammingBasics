@@ -2,7 +2,6 @@ let canvas,
     ctx;
 
 let data = [...new Array(25)].map((_, i) => i+1);
-let timeoutMS = 0;
 
 function init() {
     canvas = document.getElementsByTagName("canvas")[0];
@@ -55,20 +54,19 @@ async function startSort(type) {
 
 async function bubble() {
     let isSorted = true;
-    for (let i = 0; i < data.length-1; i++) {
-        await new Promise((resolve, reject) => setTimeout(function() {
-            let comparing = data.slice(i, i+2);
-            let sorted = [Math.min(...comparing), Math.max(...comparing)];
-            if (comparing != sorted) {
-                if (isSorted)
+    await new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            for (let i = 0; i < data.length-1; i++) {
+                let comparing = data.slice(i, i+2);
+                let sorted = [Math.min(...comparing), Math.max(...comparing)];
+                if (comparing != sorted && isSorted)
                     isSorted = false;
-
                 data.splice(i, 2, ...sorted);
-                drawData();
+                resolve("asd");
             }
-            resolve();
-        }, timeoutMS));
-    }
+        });
+    });
+    drawData();
     return isSorted;
 }
 
