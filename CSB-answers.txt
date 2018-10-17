@@ -1,0 +1,36 @@
+Context
+1.	c
+2.
+	De broncode wordt gelezen door de applicatie.
+	Het programma wordt uitgevoerd dmv een interpreter
+
+Computerorganisatie
+3.	255
+4.
+Input A	Input B	Output
+true	false	true
+false	true	true
+true	true	true
+false	false	false
+5.	64 bits = 8 bytes
+6. 	
+0x2 = 0b0010
+0x7 = 0b0111
+0x27 = 0b00100111
+
+Operating Systems
+7.	Detecteren van virussen
+8.	pwd
+
+Persistency
+9.	b
+10.	SELECT Name FROM student WHERE EC <= 45;
+
+Client Server Architectuur
+11.	HyperText Transfer Protocol
+12.	Bij een synchroon HTTP request wordt de pagina nog actief geladen in de browser. Dan is de render engine nog niet klaar met het schetsen van de website layout.
+Een asynchroon HTTP request wordt gestart doordat de user iets doet in de DOM (zoals een knop aanklikken) of omdat een stuk code in de javascript een request aanroept. De pagina is dan al wel geladen, dus voor de gebruiker al zichtbaar. Een asynchroon request wordt op de achtergrond uitgevoerd, zonder dat de gebruiker er per se op moet wachten.
+
+Software Engineering
+13.	SCRUM is gebaseerd op sprints. In elke sprint zit een development fase, een test fase en een feedback fase.
+14.	Verspreidingsrechten, wijzigingsrechten
